@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function(req, res){
-    res.send('this is the home page');
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/contact', function(req, res){
@@ -13,6 +13,10 @@ app.get('/contact', function(req, res){
 
 app.get('/profile/:id', function(req, res){
     res.send('you requested to see the profile with id: ' + req.params.id);
+});
+
+app.get('/api/allprofiles/', function(req, res){
+    res.send('this will be the json profile data');
 });
 
 app.listen(3000);

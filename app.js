@@ -19,4 +19,5 @@ app.get('/api/allprofiles/', function(req, res){
     res.send('this will be the json profile data');
 });
 
+console.log('listenting on port 3000');
 app.listen(3000);

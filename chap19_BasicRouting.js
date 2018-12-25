@@ -17,7 +17,8 @@ var server = http.createServer(function(req, res){
         var myObj = {
             name : 'Ryu',
             job: 'Ninja',
-            age: 29
+            age: 29,
+            location: 'Delray Beach'
         };
         res.end(JSON.stringify(myObj));
     } else {
